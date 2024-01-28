@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+//#include <ios> //needed for ignore with numeric_limit paremeters
+//#include <limits> //needed for ignore with numeric_limit paremeters
 #include <vector>
 using namespace std;
 
@@ -22,7 +24,10 @@ main() {
     cout << "\nNow enter the number of entries to be listed under the description:\n";
     cin >> menuLen; //may have to convert from str or char[] to int
     vector<string> menuItems(menuLen);
-    cin.sync();
+//    cin.clear();
+    cin.ignore();
+//    cin.sync();
+//    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //clear buffer before taking new line, ignores namespace std for some reason
 
     //Create entries for menu
     cout << "\nPlease enter the descriptions you would like to have displayed in each menu item.\n";
