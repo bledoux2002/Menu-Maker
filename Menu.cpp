@@ -6,6 +6,7 @@
 //#include <ios> //needed for ignore with numeric_limit paremeters
 //#include <limits> //needed for ignore with numeric_limit paremeters
 #include <vector>
+#include "json.hpp"
 using namespace std;
 
 //use struct for public, class for private
